@@ -1,0 +1,7 @@
+.defaults {
+  background-origin: border-box;
+}
+
+.with-arguments {
+  background-origin: padding-box;
+}

@@ -1,0 +1,7 @@
+.defaults {
+  background-size: 5em 5em;
+}
+
+.with-arguments {
+  background-size: 10pt 25%;
+}

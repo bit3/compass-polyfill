@@ -1,0 +1,13 @@
+$default-background-size: 100% auto !default;
+
+@mixin background-size($size...) {
+  @if length($size) > 0 {
+    $value: ();
+    @each $part in $size {
+      $value: append($value, unquote($part), space);
+    }
+  } @else {
+    $value: $default-background-size;
+  }
+  background-size: $value;
+}

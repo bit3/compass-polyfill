@@ -1,0 +1,4 @@
+@mixin appearance($appearance) {
+  -moz-appearance: unquote($appearance);
+  -webkit-appearance: unquote($appearance);
+}

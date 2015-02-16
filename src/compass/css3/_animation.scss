@@ -1,0 +1,50 @@
+$default-animation-name: null !default;
+$default-animation-duration: null !default;
+$default-animation-delay: null !default;
+$default-animation-timing-function: null !default;
+$default-animation-iteration-count: null !default;
+$default-animation-direction: null !default;
+$default-animation-fill-mode: null !default;
+$default-animation-play-state: null !default;
+
+@mixin keyframes($name, $deprecated-prefixes...) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animation-name($name...) {
+  animation-name: if(length($name) > 0, $name, $default-animation-name);
+}
+
+@mixin animation-duration($duration...) {
+  animation-duration: if(length($duration) > 0, $duration, $default-animation-duration);
+}
+
+@mixin animation-delay($delay...) {
+  animation-delay: if(length($delay) > 0, $delay, $default-animation-delay);
+}
+
+@mixin animation-timing-function($function...) {
+  animation-timing-function: if(length($function) > 0, $function, $default-animation-timing-function);
+}
+
+@mixin animation-iteration-count($count...) {
+  animation-iteration-count: if(length($count) > 0, $count, $default-animation-iteration-count);
+}
+
+@mixin animation-direction($direction...) {
+  animation-direction: if(length($direction) > 0, $direction, $default-animation-direction);
+}
+
+@mixin animation-fill-mode($mode...) {
+  animation-fill-mode: if(length($mode) > 0, $mode, $default-animation-fill-mode);
+}
+
+@mixin animation-play-state($state...) {
+  animation-play-state: if(length($state) > 0, $state, $default-animation-play-state);
+}
+
+@mixin animation($animation...) {
+  animation: if(length($animation) > 0, $animation, $default-animation-name $default-animation-duration $default-animation-timing-function $default-animation-delay $default-animation-iteration-count $default-animation-direction $default-animation-fill-mode $default-animation-play-state);
+}

@@ -1,0 +1,41 @@
+$default-animation-name: move-animation;
+$default-animation-duration: 5s;
+$default-animation-delay: 500ms;
+$default-animation-timing-function: linear;
+$default-animation-iteration-count: 3;
+$default-animation-direction: alternate;
+$default-animation-fill-mode: forwards;
+$default-animation-play-state: running;
+
+@import "compass/css3/animation";
+
+@include keyframes(move-animation) {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 100px;
+  }
+}
+
+.defaults {
+  @include animation-name();
+  @include animation-duration();
+  @include animation-delay();
+  @include animation-timing-function();
+  @include animation-iteration-count();
+  @include animation-direction();
+  @include animation-fill-mode();
+  @include animation-play-state();
+}
+
+.with-arguments {
+  @include animation-name(move-animation-2);
+  @include animation-duration(2s);
+  @include animation-delay(300ms);
+  @include animation-timing-function(ease);
+  @include animation-iteration-count(5);
+  @include animation-direction(reverse);
+  @include animation-fill-mode(backwards);
+  @include animation-play-state(paused);
+}

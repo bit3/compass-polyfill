@@ -1,0 +1,13 @@
+$default-background-origin: content-box !default;
+
+@mixin background-origin($origin) {
+  @if length($origin) > 0 {
+    $value: ();
+    @each $part in $origin {
+      $value: append($value, unquote($part), space);
+    }
+  } @else {
+    $value: $default-background-origin;
+  }
+  background-origin: $value;
+}

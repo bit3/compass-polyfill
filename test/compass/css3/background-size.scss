@@ -1,0 +1,9 @@
+@import "compass/css3/background-size";
+
+.defaults {
+  @include background-size(5em, 5em);
+}
+
+.with-arguments {
+  @include background-size(10pt, 25%);
+}

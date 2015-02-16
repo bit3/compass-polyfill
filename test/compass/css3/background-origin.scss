@@ -1,0 +1,9 @@
+@import "compass/css3/background-origin";
+
+.defaults {
+  @include background-origin(border-box);
+}
+
+.with-arguments {
+  @include background-origin(padding-box);
+}
